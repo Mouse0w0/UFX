@@ -31,7 +31,7 @@ public class TitleBar extends Control {
 	}
 	
 	private ObjectProperty<Image> icon;
-	public final ObjectProperty<Image> iconProperty(){
+	public final ObjectProperty<Image> iconProperty() {
 		if(icon == null)
 			icon = new SimpleObjectProperty<>(this, "icon");
 		return icon;

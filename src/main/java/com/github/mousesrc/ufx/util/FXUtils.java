@@ -32,4 +32,12 @@ public interface FXUtils {
 	static Bounds subtractBounds2D(Bounds bounds, double x, double y) {
 		return new BoundingBox(bounds.getMinX() - x, bounds.getMinY() - y, bounds.getWidth(), bounds.getHeight());
 	}
+	
+	static double centerX(double contentX, double contentWidth, double nodeWidth) {
+		return contentX + (contentWidth - nodeWidth) / 2.;
+	}
+	
+	static double centerY(double contentY, double contentHeight, double nodeHeight) {
+		return contentY + (contentHeight - nodeHeight) / 2.;
+	}
 }
