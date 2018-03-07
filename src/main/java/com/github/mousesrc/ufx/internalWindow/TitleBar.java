@@ -1,8 +1,8 @@
-package com.github.mousesrc.ufx.control;
+package com.github.mousesrc.ufx.internalWindow;
 
 import java.util.LinkedList;
 
-import com.github.mousesrc.ufx.internal.control.skin.TitleBarSkin;
+import com.github.mousesrc.ufx.internal.skin.TitleBarSkin;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

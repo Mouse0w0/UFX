@@ -1,6 +1,6 @@
-package com.github.mousesrc.ufx.control;
+package com.github.mousesrc.ufx.internalWindow;
 
-import com.github.mousesrc.ufx.internal.control.skin.InternalWindowSkin;
+import com.github.mousesrc.ufx.internal.skin.InternalWindowSkin;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;

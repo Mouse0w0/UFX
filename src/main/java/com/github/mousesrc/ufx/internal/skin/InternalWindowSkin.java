@@ -1,6 +1,6 @@
-package com.github.mousesrc.ufx.internal.control.skin;
+package com.github.mousesrc.ufx.internal.skin;
 
-import com.github.mousesrc.ufx.control.InternalWindow;
+import com.github.mousesrc.ufx.internalWindow.InternalWindow;
 
 import javafx.scene.control.SkinBase;
 

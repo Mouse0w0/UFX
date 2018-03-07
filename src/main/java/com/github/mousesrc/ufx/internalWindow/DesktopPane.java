@@ -1,6 +1,6 @@
-package com.github.mousesrc.ufx.control;
+package com.github.mousesrc.ufx.internalWindow;
 
-import com.github.mousesrc.ufx.internal.control.skin.DesktopPaneSkin;
+import com.github.mousesrc.ufx.internal.skin.DesktopPaneSkin;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;

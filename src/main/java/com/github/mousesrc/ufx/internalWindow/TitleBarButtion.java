@@ -1,4 +1,4 @@
-package com.github.mousesrc.ufx.control;
+package com.github.mousesrc.ufx.internalWindow;
 
 import javafx.scene.control.Control;
 
