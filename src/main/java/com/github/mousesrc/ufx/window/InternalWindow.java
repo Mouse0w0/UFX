@@ -1,8 +1,11 @@
-package com.github.mousesrc.ufx.internalWindow;
+package com.github.mousesrc.ufx.window;
 
 import com.github.mousesrc.ufx.internal.skin.InternalWindowSkin;
 
+import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.ReadOnlyBooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -24,14 +27,27 @@ public class InternalWindow extends Control{
 		contentProperty().set(node);
 	}
 	
+	private BooleanProperty movable;
+	public final BooleanProperty movableProperty() {
+		if(movable == null)
+			movable = new SimpleBooleanProperty(this, "movable");
+		return movable;
+	}
+	public final boolean isMovable() {
+		return movable == null ? true : movable.get();
+	}
+	public final void setMovable(boolean movable) {
+		movableProperty().set(movable);
+	}
+	
 	public InternalWindow() {
 		getStyleClass().add("internal-window");
 	}
 	
 	public void close() {
 		Parent parent = getParent();
-		if (parent instanceof DesktopPane)
-			((DesktopPane) parent).getWindows().remove(this);
+		if (parent instanceof WindowContainer)
+			((WindowContainer) parent).getWindows().remove(this);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.github.mousesrc.ufx.internalWindow;
+package com.github.mousesrc.ufx.window;
 
 import com.github.mousesrc.ufx.internal.skin.DesktopPaneSkin;
 
@@ -12,7 +12,7 @@ import javafx.geometry.Orientation;
 import javafx.scene.control.Control;
 import javafx.scene.control.Skin;
 
-public class DesktopPane extends Control{
+public class DesktopPane extends Control implements WindowContainer{
 	
 	private BooleanProperty autoResize;
 	public final BooleanProperty autoResizeProperty() {
@@ -28,7 +28,6 @@ public class DesktopPane extends Control{
 	}
 
 	private final ObservableList<InternalWindow> windows = FXCollections.observableArrayList();
-
 	public final ObservableList<InternalWindow> getWindows() {
 		return windows;
 	}

@@ -3,9 +3,11 @@ package com.github.mousesrc.ufx.util;
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
+import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Window;
 
 public interface FXUtils {
@@ -39,5 +41,13 @@ public interface FXUtils {
 	
 	static double centerY(double contentY, double contentHeight, double nodeHeight) {
 		return contentY + (contentHeight - nodeHeight) / 2.;
+	}
+	
+	static void remove(Node node) {
+		Parent parent = node.getParent();
+		if(parent instanceof Pane)
+			((Pane) parent).getChildren().remove(node);
+		else if(parent instanceof Group)
+			((Group) parent).getChildren().remove(node);
 	}
 }

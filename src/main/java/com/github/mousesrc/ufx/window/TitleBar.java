@@ -1,4 +1,4 @@
-package com.github.mousesrc.ufx.internalWindow;
+package com.github.mousesrc.ufx.window;
 
 import java.util.LinkedList;
 
@@ -43,9 +43,9 @@ public class TitleBar extends Control {
 		iconProperty().set(icon);
 	}
 	
-	private final ObservableList<Node> buttons = FXCollections.observableList(new LinkedList<>());
-	public ObservableList<Node> getButtons() {
-		return buttons;
+	private final ObservableList<Node> rightNodes = FXCollections.observableList(new LinkedList<>());
+	public ObservableList<Node> getRightNodes() {
+		return rightNodes;
 	}
 	
 	public TitleBar() {
