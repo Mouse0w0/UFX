@@ -1,10 +1,8 @@
-package com.github.mousesrc.ufx.window;
+package com.github.mousesrc.ufx.control.window;
 
-import com.github.mousesrc.ufx.internal.skin.DesktopPaneSkin;
+import com.github.mousesrc.ufx.internal.skin.window.DesktopPaneSkin;
 
-import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,20 +10,7 @@ import javafx.geometry.Orientation;
 import javafx.scene.control.Control;
 import javafx.scene.control.Skin;
 
-public class DesktopPane extends Control implements WindowContainer{
-	
-	private BooleanProperty autoResize;
-	public final BooleanProperty autoResizeProperty() {
-		if(autoResize == null)
-			autoResize = new SimpleBooleanProperty(this, "autoResize");
-		return autoResize;
-	}
-	public final boolean isAutoResize() {
-		return autoResize == null ? true : autoResize.get();
-	}
-	public final void setAutoResize(boolean value) {
-		autoResizeProperty().set(value);
-	}
+public class DesktopPane extends Control implements WindowContainer {
 
 	private final ObservableList<InternalWindow> windows = FXCollections.observableArrayList();
 	public final ObservableList<InternalWindow> getWindows() {
@@ -33,7 +18,7 @@ public class DesktopPane extends Control implements WindowContainer{
 	}
 	
 	public DesktopPane() {
-		getStyleClass().add("desktop-pane");
+		getStyleClass().setAll("desktop-pane");
 	}
 	
 	@Override
